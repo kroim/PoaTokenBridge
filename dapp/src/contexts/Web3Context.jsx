@@ -38,10 +38,7 @@ const updateTitle = chainId => {
 
 const rpc = {
   1: getRPCUrl(1),
-  42: getRPCUrl(42),
-  100: getRPCUrl(100),
-  77: getRPCUrl(77),
-  56: getRPCUrl(56),
+  100: getRPCUrl(100),  
 };
 
 const connector = async (ProviderPackage, options) => {

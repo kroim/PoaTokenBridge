@@ -28,21 +28,14 @@ const ETH_REBASING_TOKENS = [
   '0xf911a7ec46a2c6fa49193212fe4a2a9b95851c27'.toLowerCase(),
 ];
 
-const BSC_REBASING_TOKENS = [
-  '0x233d91a0713155003fc4dce0afa871b508b3b715'.toLowerCase(),
-];
 
 export const isRebasingToken = token => {
   if (!token) return false;
   const { chainId, address } = token;
   switch (chainId) {
-    case 56:
-      return BSC_REBASING_TOKENS.includes(address.toLowerCase());
     case 1:
       return ETH_REBASING_TOKENS.includes(address.toLowerCase());
     case 100:
-    case 77:
-    case 42:
     default:
       return false;
   }

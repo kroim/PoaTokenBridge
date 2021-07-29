@@ -8,21 +8,14 @@ const ETH_INFLATIONARY_TOKENS = [
   '0xcbc1065255cbc3ab41a6868c22d1f1c573ab89fd'.toLowerCase(),
 ];
 
-const BSC_INFLATIONARY_TOKENS = [
-  '0x250632378e573c6be1ac2f97fcdf00515d0aa91b'.toLowerCase(),
-];
 
 export const isInflationaryToken = token => {
   if (!token) return false;
   const { chainId, address } = token;
   switch (chainId) {
-    case 56:
-      return BSC_INFLATIONARY_TOKENS.includes(address.toLowerCase());
     case 1:
       return ETH_INFLATIONARY_TOKENS.includes(address.toLowerCase());
     case 100:
-    case 77:
-    case 42:
     default:
       return false;
   }

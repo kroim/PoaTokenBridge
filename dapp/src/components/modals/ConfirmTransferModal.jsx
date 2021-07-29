@@ -16,10 +16,7 @@ import {
   useToast,
 } from '@chakra-ui/react';
 import TransferImage from 'assets/confirm-transfer.svg';
-import {
-  BinancePeggedAssetWarning,
-  isERC20ExchangableBinancePeggedAsset,
-} from 'components/warnings/BinancePeggedAssetWarning';
+
 import { DaiWarning, isERC20DaiAddress } from 'components/warnings/DaiWarning';
 import { GnosisSafeWarning } from 'components/warnings/GnosisSafeWarning';
 import {
@@ -44,7 +41,6 @@ import {
   getNetworkLabel,
   handleWalletError,
 } from 'lib/helpers';
-import { BSC_XDAI_BRIDGE } from 'lib/networks';
 import React, { useCallback, useEffect, useState } from 'react';
 
 export const ConfirmTransferModal = ({ isOpen, onClose }) => {
@@ -113,12 +109,7 @@ export const ConfirmTransferModal = ({ isOpen, onClose }) => {
     !!toToken &&
     !enableReversedBridge &&
     toToken.chainId === foreignChainId &&
-    toToken.address === ADDRESS_ZERO;
-  const showBinancePeggedAssetWarning =
-    !!fromToken &&
-    bridgeDirection === BSC_XDAI_BRIDGE &&
-    fromToken.chainId === homeChainId &&
-    isERC20ExchangableBinancePeggedAsset(fromToken);
+    toToken.address === ADDRESS_ZERO;  
   const isInflationToken = isInflationaryToken(fromToken);
   const isRebaseToken = isRebasingToken(fromToken);
 
@@ -247,10 +238,7 @@ export const ConfirmTransferModal = ({ isOpen, onClose }) => {
               />
             )}
             {isERC20Dai && <DaiWarning noShadow />}
-            {showReverseBridgeWarning && <ReverseWarning noShadow />}
-            {showBinancePeggedAssetWarning && (
-              <BinancePeggedAssetWarning token={fromToken} noShadow />
-            )}
+            {showReverseBridgeWarning && <ReverseWarning noShadow />}            
             {isInflationToken && (
               <InflationaryTokenWarning
                 token={fromToken}
