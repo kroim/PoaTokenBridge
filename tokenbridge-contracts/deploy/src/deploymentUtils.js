@@ -130,8 +130,7 @@ async function sendRawTx({ chainId, data, nonce, to, privateKey, url, gasPrice, 
       data,
       value
     }    
-    console.log('rawTx : ', rawTx)
-
+    
     const tx = new Tx(rawTx)
     tx.sign(privateKey)
     const serializedTx = tx.serialize()
