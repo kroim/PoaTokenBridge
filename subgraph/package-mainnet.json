@@ -1,0 +1,18 @@
+{
+  "name": "@omnibridge/subgraph",
+  "version": "1.0.0",
+  "dependencies": {
+    "@graphprotocol/graph-cli": "^0.20.1",
+    "@graphprotocol/graph-ts": "^0.20.0"
+  },
+  "license": "MIT",
+  "scripts": {
+    "codegen": "graph codegen --output-dir src/types/",
+    "build": "graph build",
+    "create:blocks": "graph create --node http://127.0.0.1:8020 sustain/porinibridge",
+    "deploy": "graph deploy --node http://127.0.0.1:8020 --ipfs http://localhost:5001 sustain/porinibridge"    
+  },
+  "devDependencies": {
+    "mustache": "^4.2.0"
+  }
+}

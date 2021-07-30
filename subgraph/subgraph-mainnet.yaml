@@ -1,18 +1,18 @@
 specVersion: 0.0.2
-description: Subgraph that indexes the omnibridge transfers
-repository: https://github.com/raid-guild/xdai-omnibridge
+description: Subgraph that indexes the porinibridge transfers
+repository: https://github.com/raid-guild/xdai-porinibridge
 schema:
   file: ./schema.graphql
 dataSources:
   - kind: ethereum/contract
     name: Omnibridge
     # prettier-ignore
-    network: {{network}}
+    network: mainnet
     source:
       abi: Omnibridge
-      address: '{{omnibridge}}'
+      address: '0x41D486E9Aa33263b0586d798C3c6601fA9C5a557'
       # prettier-ignore
-      startBlock: {{startBlock}}
+      startBlock: 289488
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -38,12 +38,12 @@ dataSources:
   - kind: ethereum/contract
     name: AMB
     # prettier-ignore
-    network: {{network}}
+    network: mainnet
     source:
       abi: AMB
-      address: '{{amb}}'
+      address: '0x3bD9B4dD65050884B12Ec0B7318f9AbEC52Ae5E2'
       # prettier-ignore
-      startBlock: {{startBlock}}
+      startBlock: 289488
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
