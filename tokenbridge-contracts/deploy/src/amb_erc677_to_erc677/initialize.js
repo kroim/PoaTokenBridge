@@ -58,6 +58,7 @@ async function initialize({
   sendRawTx
 }) {
   let nonce = await web3.eth.getTransactionCount(DEPLOYMENT_ACCOUNT_ADDRESS)
+  let chainId = await web3.eth.getChainId()
 
   const contract = new web3.eth.Contract(abi, address)
   console.log(`
@@ -87,6 +88,7 @@ async function initialize({
     )
     .encodeABI()
   const txInitialize = await sendRawTx({
+    chainId: chainId,
     data: initializeData,
     nonce,
     to: address,

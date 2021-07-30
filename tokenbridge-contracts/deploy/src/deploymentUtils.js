@@ -52,7 +52,9 @@ async function deployContract(contractJson, args, { from, network, nonce }) {
       arguments: args
     })
     .encodeABI()
+  const chainId = await web3.eth.getChainId()
   const tx = await sendRawTx({
+    chainId: chainId,
     data: result,
     nonce: Web3Utils.toHex(nonce),
     to: null,
@@ -78,20 +80,24 @@ async function deployContract(contractJson, args, { from, network, nonce }) {
 }
 
 async function sendRawTxHome(options) {
+  const chainId = await web3Home.eth.getChainId()
   return sendRawTx({
     ...options,
+    chainId: chainId,
     gasPrice: HOME_DEPLOYMENT_GAS_PRICE
   })
 }
 
 async function sendRawTxForeign(options) {
+  const chainId = await web3Foreign.eth.getChainId()
   return sendRawTx({
     ...options,
+    chainId: chainId,
     gasPrice: FOREIGN_DEPLOYMENT_GAS_PRICE
   })
 }
 
-async function sendRawTx({ data, nonce, to, privateKey, url, gasPrice, value }) {
+async function sendRawTx({ chainId, data, nonce, to, privateKey, url, gasPrice, value }) {
   try {
     const txToEstimateGas = {
       from: privateKeyToAddress(Web3Utils.bytesToHex(privateKey)),
@@ -116,13 +122,15 @@ async function sendRawTx({ data, nonce, to, privateKey, url, gasPrice, value }) 
     }
 
     const rawTx = {
+      chainId,
       nonce,
       gasPrice: Web3Utils.toHex(gasPrice),
       gasLimit: Web3Utils.toHex(gas),
       to,
       data,
       value
-    }
+    }    
+    console.log('rawTx : ', rawTx)
 
     const tx = new Tx(rawTx)
     tx.sign(privateKey)
