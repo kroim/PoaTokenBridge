@@ -40,9 +40,14 @@ export const useBridgeDirection = () => {
 
   const getGraphEndpoint = useCallback(
     chainId => {
-      const subgraphName =
-        homeChainId === chainId ? homeGraphName : foreignGraphName;
-      return `https://api.thegraph.com/subgraphs/name/${subgraphName}`;
+      if (homeChainId === chainId) {
+        // return home network sugraph link
+        return `https://api.thegraph.com/subgraphs/name/raid-guild/xdai-omnibridge`;
+      } 
+        // return foreign network subgraph link
+        return `http://52.14.144.195:8000/subgraphs/name/raid-guild/mainnet-omnibridge`;
+        
+      
     },
     [foreignGraphName, homeChainId, homeGraphName],
   );
