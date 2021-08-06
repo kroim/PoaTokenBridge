@@ -15,8 +15,6 @@ export const useBridgeDirection = () => {
     homeChainId,
     foreignChainId,
     ambLiveMonitorPrefix,
-    homeGraphName,
-    foreignGraphName,
     homeAmbAddress,
     foreignAmbAddress,
   } = bridgeConfig;
@@ -42,14 +40,12 @@ export const useBridgeDirection = () => {
     chainId => {
       if (homeChainId === chainId) {
         // return home network sugraph link
-        return `https://api.thegraph.com/subgraphs/name/raid-guild/xdai-omnibridge`;
+        return `https://api.thegraph.com/subgraphs/name/kroim/xdai-porinibridge`;
       } 
         // return foreign network subgraph link
-        return `http://52.14.144.195:8000/subgraphs/name/raid-guild/mainnet-omnibridge`;
-        
-      
+        return `http://172.104.151.131:8000/subgraphs/name/sustain/porinibridge`;       
     },
-    [foreignGraphName, homeChainId, homeGraphName],
+    [homeChainId],
   );
 
   const getAMBAddress = useCallback(

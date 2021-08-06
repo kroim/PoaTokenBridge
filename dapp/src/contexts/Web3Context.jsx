@@ -37,7 +37,7 @@ const updateTitle = chainId => {
 };
 
 const rpc = {
-  1: getRPCUrl(1),
+  421: getRPCUrl(421),
   100: getRPCUrl(100),  
 };
 

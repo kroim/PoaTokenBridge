@@ -47,7 +47,7 @@ const Tag = ({ bg, txt }) => (
 
 const networkTags = {
   100: <Tag bg="#4DA9A6" txt="xDai" />,
-  1: <Tag bg="#5A74DA" txt="Ethereum" />, 
+  421: <Tag bg="#5A74DA" txt="Sustain" />, 
 };
 
 const getNetworkTag = chainId => networkTags[chainId];

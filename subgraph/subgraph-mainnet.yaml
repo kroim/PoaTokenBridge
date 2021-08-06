@@ -10,9 +10,9 @@ dataSources:
     network: mainnet
     source:
       abi: Omnibridge
-      address: '0x41D486E9Aa33263b0586d798C3c6601fA9C5a557'
+      address: '0xA4509CF61CD9459A8a6CA209D2341bf8e35E0A8C'
       # prettier-ignore
-      startBlock: 289488
+      startBlock: 366005
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -41,9 +41,9 @@ dataSources:
     network: mainnet
     source:
       abi: AMB
-      address: '0x3bD9B4dD65050884B12Ec0B7318f9AbEC52Ae5E2'
+      address: '0x25b47dC0F6678d22492be6D00d3D67c987C0A405'
       # prettier-ignore
-      startBlock: 289488
+      startBlock: 366005
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4

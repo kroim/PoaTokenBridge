@@ -1,17 +1,17 @@
-export const ETH_XDAI_BRIDGE = 'eth-xdai';
+export const ETH_XDAI_BRIDGE = 'sustain-xdai';
 
 const ETH_XDAI_BRIDGE_CONFIG = {
-  label: 'eth⥊xdai',
+  label: 'sustain⥊xdai',
   homeChainId: 100,
-  foreignChainId: 1,
+  foreignChainId: 421,
   enableReversedBridge: false,
   enableForeignCurrencyBridge: false,
   foreignMediatorAddress:
-    '0x88ad09518695c6c3712AC10a214bE5109a655671'.toLowerCase(),
+    '0x41D486E9Aa33263b0586d798C3c6601fA9C5a557'.toLowerCase(),
   homeMediatorAddress:
-    '0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d'.toLowerCase(),
-  foreignAmbAddress: '0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e'.toLowerCase(),
-  homeAmbAddress: '0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59'.toLowerCase(),
+    '0x62f26c0255a6d98DfA9Db398116d1BA1ae7CEfbb'.toLowerCase(),
+  foreignAmbAddress: '0x3bD9B4dD65050884B12Ec0B7318f9AbEC52Ae5E2'.toLowerCase(),
+  homeAmbAddress: '0xfC575F0E2d856793dD527d8Bc8E042622B02Df26'.toLowerCase(),
   foreignGraphName: 'raid-guild/mainnet-omnibridge',
   homeGraphName: 'raid-guild/xdai-omnibridge',
   ambLiveMonitorPrefix: 'https://alm-xdai.herokuapp.com',
@@ -38,14 +38,14 @@ export const networks = getNetworkConfig(ENABLED_BRIDGES);
 
 export const defaultTokens = {
   [ETH_XDAI_BRIDGE]: {
-    1: {
-      address: '0x0Ae055097C6d159879521C384F1D2123D1f195e6',
-      chainId: 1,
-      symbol: 'STAKE',
-      name: 'STAKE',
+    421: {
+      address: '0x62DAE5fD87368F56aF3D576D4837523429DcE2b1',
+      chainId: 421,
+      symbol: 'PCT',
+      name: 'PCT',
     },
     100: {
-      address: '0xb7D311E2Eb55F2f68a9440da38e7989210b9A05e',
+      address: '0x800C618cFC61820EbB15C8fd816DEB675CFf82fc',
       chainId: 100,
       symbol: 'STAKE',
       name: 'STAKE on xDai',

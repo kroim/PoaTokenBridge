@@ -20,36 +20,36 @@ export const NON_ETH_CHAIN_IDS = [100];
 export const XDAI_CHAIN_IDS = [100];
 
 export const nativeCurrencies = {
-  1: {
-    chainId: 1,
-    decimals: 18,
-    logoURI: ETHER_CURRENCY_LOGO,
-    address: ADDRESS_ZERO,
-    name: 'Ether',
-    symbol: 'ETH',
-    mode: 'NATIVE',
-    homeTokenAddress:
-      '0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1'.toLowerCase(), // WETH in dai 
-  },  
+  // 421: {
+  //   chainId: 421,
+  //   decimals: 18,
+  //   logoURI: ETHER_CURRENCY_LOGO,
+  //   address: ADDRESS_ZERO,
+  //   name: 'Sustain Native Coin',
+  //   symbol: 'ETH',
+  //   mode: 'NATIVE',
+  //   homeTokenAddress:
+  //     '0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1'.toLowerCase(), // WETH in dai 
+  // },  
 };
 
 export const nativeCurrencyMediators = {
-  1: '0x227a6f13aa0dba8912d740c0f88fb1304b2597e1'.toLowerCase(), // WETHOmnibridgeRouter  
+  // 421: '0x227a6f13aa0dba8912d740c0f88fb1304b2597e1'.toLowerCase(), // WETHOmnibridgeRouter  
 };
 
 export const networkNames = {
-  1: 'ETH Mainnet',
+  421: 'Sustain',
   100: 'xDai Chain',
 };
 
 export const networkLabels = {
-  1: 'Mainnet',  
+  421: 'Sustain',  
   100: 'xDai',
 };
 
 export const networkCurrencies = {
-  1: {
-    name: 'Ethereum',
+  421: {
+    name: 'Sustain',
     symbol: 'ETH',
   },
   100: {
@@ -64,11 +64,11 @@ const {
 } = process.env;
 
 export const chainUrls = {
-  1: {
+  421: {
     rpc: REACT_APP_MAINNET_RPC_URL.split(' '),
     explorer: 'https://blockscout.com/eth/mainnet',
-    chainId: 1,
-    name: networkNames[1],
+    chainId: 421,
+    name: networkNames[421],
   },
   100: {
     rpc: REACT_APP_XDAI_RPC_URL.split(' '),
@@ -80,7 +80,7 @@ export const chainUrls = {
 
 export const defaultTokensUrl = {
   100: 'https://tokens.honeyswap.org',
-  1: 'https://tokens.uniswap.org',  
+  421: 'https://tokens.uniswap.org',  
 };
 
 export const GRAPH_HEALTH_ENDPOINT =

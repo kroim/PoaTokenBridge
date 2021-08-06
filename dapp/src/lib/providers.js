@@ -9,7 +9,7 @@ const {
 } = LOCAL_STORAGE_KEYS;
 
 const RPC_URL = {
-  1: MAINNET_RPC_URL,
+  421: MAINNET_RPC_URL,
   100: XDAI_RPC_URL,
 };
 
