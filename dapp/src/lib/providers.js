@@ -4,13 +4,13 @@ import { LOCAL_STORAGE_KEYS } from 'lib/constants';
 import { getNetworkLabel, getRPCUrl, logError } from 'lib/helpers';
 
 const {
-  MAINNET_RPC_URL,
-  XDAI_RPC_URL,
+  SUSTAIN_RPC_URL,
+  XDAI_RPC_URL,  
 } = LOCAL_STORAGE_KEYS;
 
 const RPC_URL = {
-  421: MAINNET_RPC_URL,
-  100: XDAI_RPC_URL,
+  421: SUSTAIN_RPC_URL,
+  100: XDAI_RPC_URL,  
 };
 
 const NETWORK_TIMEOUT = 1000;
@@ -43,9 +43,9 @@ export const getEthersProvider = async chainId => {
   const label = getNetworkLabel(chainId).toUpperCase();
   const sessionHealthyURL = `HEALTHY-RPC-URL-${label}`;
   const localRPCUrl = window.localStorage.getItem(RPC_URL[chainId]);
-  const currentRPCUrls = getRPCUrl(chainId, true);
+  const currentRPCUrls = getRPCUrl(chainId);
   const rpcURLs =
-    localRPCUrl?.length > 0 ? [localRPCUrl, ...currentRPCUrls] : currentRPCUrls;
+    localRPCUrl?.length > 0 ? [localRPCUrl, ...currentRPCUrls] : [currentRPCUrls];
 
   const provider =
     (await checkRPCHealth(sessionStorage.getItem(sessionHealthyURL))) ||

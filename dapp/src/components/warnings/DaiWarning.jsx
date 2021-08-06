@@ -2,8 +2,8 @@ import { Alert, AlertIcon, Flex, Link, Text } from '@chakra-ui/react';
 import React from 'react';
 
 const ERC20DaiAddress = {
-  100: '0x44fA8E6f47987339850636F88629646662444217', // Dai bridged address in xDai network
-  421: '0x6B175474E89094C44Da98b954EedeAC495271d0F',  // Dai address in Foreign network 
+  421: '0x4F96Fe3b7A6Cf9725f59d353F723c1bDb64CA6Aa',
+  100: '0xa844e8c64608dede1f22f519ad0e98e2629684df',  
 };
 
 export const isERC20DaiAddress = token => {

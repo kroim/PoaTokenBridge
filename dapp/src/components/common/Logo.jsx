@@ -10,7 +10,7 @@ const BAD_SRCS = {};
 
 const logos = {
   421: EthLogo,
-  100: xDAILogo,
+  100: xDAILogo,  
 };
 
 export const Logo = ({ uri, reverseFallback = false }) => {

@@ -69,7 +69,7 @@ export const Header = () => {
         <Link to="/">
           <Flex justify="space-around" align="center">
             <Image src={Logo} mr={4} />
-            <Text fontWeight="bold">OmniBridge</Text>
+            <Text fontWeight="bold">PoriniBridge</Text>
           </Flex>
         </Link>
         <Button

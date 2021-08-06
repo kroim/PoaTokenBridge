@@ -12,7 +12,7 @@ import {
 } from 'lib/constants';
 import {
   defaultTokens,
-  ETH_XDAI_BRIDGE,
+  SUSTAIN_XDAI_BRIDGE,
   networks,
 } from 'lib/networks';
 
@@ -21,7 +21,7 @@ import { getOverriddenMediator, isOverridden } from './overrides';
 export const getWalletProviderName = provider =>
   provider?.connection?.url || null;
 
-export const getNativeCurrency = chainId => nativeCurrencies[chainId || 1];
+export const getNativeCurrency = chainId => nativeCurrencies[chainId || 421];
 
 export const getNetworkName = chainId =>
   networkNames[chainId] || 'Unknown Network';
@@ -31,14 +31,14 @@ export const getNetworkLabel = chainId => networkLabels[chainId] || 'Unknown';
 export const getNetworkCurrency = chainId =>
   networkCurrencies[chainId] || { name: 'Unknown', symbol: 'Unknown' };
 
-export const getRPCUrl = (chainId, returnAsArray = false) =>
-  returnAsArray ? chainUrls[chainId || 1].rpc : chainUrls[chainId || 1].rpc[0];
+export const getRPCUrl = (chainId) =>
+  chainUrls[chainId || 421].rpc;
 
 export const getExplorerUrl = chainId =>
-  (chainUrls[chainId] || chainUrls[1]).explorer;
+  (chainUrls[chainId] || chainUrls[421]).explorer;
 
 export const getTokenListUrl = chainId =>
-  defaultTokensUrl[chainId] || defaultTokensUrl[1];
+  defaultTokensUrl[chainId] || defaultTokensUrl[421];
 
 export const removeElement = (array, index) => {
   const cloneArr = [...array];
@@ -136,27 +136,23 @@ export const logDebug = (...args) => {
 };
 
 const {
+  SUSTAIN_RPC_URL,
   XDAI_RPC_URL,
-  MAINNET_RPC_URL,
 } = LOCAL_STORAGE_KEYS;
 
 export const getRPCKeys = bridgeDirection => {
   switch (bridgeDirection) {
-    case ETH_XDAI_BRIDGE:
-      return {
-        homeRPCKey: XDAI_RPC_URL,
-        foreignRPCKey: MAINNET_RPC_URL,
-      };
+    case SUSTAIN_XDAI_BRIDGE:
     default:
       return {
         homeRPCKey: XDAI_RPC_URL,
-        foreignRPCKey: MAINNET_RPC_URL,
+        foreignRPCKey: SUSTAIN_RPC_URL,
       };
   }
 };
 
 export const getHelperContract = chainId =>
-  nativeCurrencyMediators[chainId || 1];
+  nativeCurrencyMediators[chainId || 421];
 
 export const getMediatorAddressWithoutOverride = (bridgeDirection, chainId) => {
   if (!bridgeDirection || !chainId) return null;

@@ -44,7 +44,7 @@ export const ConnectWeb3 = () => {
     }
     return (
       <Text color="greyText" mb={4} textAlign="center">
-        To access the {renderBridgeLabel()} OmniBridge, please switch to
+        To access the {renderBridgeLabel()} PoriniBridge, please switch to
         {renderChain(homeChainId)}
         or
         {renderChain(foreignChainId)}

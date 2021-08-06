@@ -1,18 +1,12 @@
 import { Alert, AlertIcon, Checkbox, Flex, Link, Text } from '@chakra-ui/react';
 import React from 'react';
 
-const ETH_INFLATIONARY_TOKENS = [
-  '0xae7ab96520de3a18e5e111b5eaab095312d7fe84'.toLowerCase(),
-];
-
-
 export const isInflationaryToken = token => {
   if (!token) return false;
-  const { chainId, address } = token;
+  const { chainId } = token;
   switch (chainId) {
-    case 421:
-      return ETH_INFLATIONARY_TOKENS.includes(address.toLowerCase());
     case 100:
+    case 421:
     default:
       return false;
   }

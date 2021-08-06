@@ -18,7 +18,7 @@ export const SwitchButton = () => {
     [switchChain, bridgeChainId],
   );
 
-  const isDefaultChain = [1, 3, 4, 5, 42].includes(bridgeChainId);
+  const isDefaultChain = [421].includes(bridgeChainId);
   const isMobileBrowser = navigator?.userAgent?.includes('Mobile') || false;
   const buttonWillWork =
     isMetamask && (isMobileBrowser ? !isDefaultChain : true);

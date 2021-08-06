@@ -16,7 +16,6 @@ import {
   useToast,
 } from '@chakra-ui/react';
 import TransferImage from 'assets/confirm-transfer.svg';
-
 import { DaiWarning, isERC20DaiAddress } from 'components/warnings/DaiWarning';
 import { GnosisSafeWarning } from 'components/warnings/GnosisSafeWarning';
 import {
@@ -46,7 +45,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 export const ConfirmTransferModal = ({ isOpen, onClose }) => {
   const { isGnosisSafe, account } = useWeb3Context();
 
-  const { homeChainId, foreignChainId, enableReversedBridge, bridgeDirection } =
+  const {foreignChainId, enableReversedBridge } =
     useBridgeDirection();
   const {
     receiver,
