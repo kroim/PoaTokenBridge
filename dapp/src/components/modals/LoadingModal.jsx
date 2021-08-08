@@ -75,7 +75,7 @@ export const LoadingModal = ({ loadingText, txHash, chainId }) => {
                     mt={{ base: 2, md: 0 }}
                   >
                     <Text textAlign="center">{`${loadingText}...`}</Text>
-                    <Text textAlign="center" color="grey">
+                    {/* <Text textAlign="center" color="grey">
                       {'Monitor at ALM '}
                       <Link
                         href={getMonitorUrl(chainId || providerChainId, txHash)}
@@ -85,7 +85,7 @@ export const LoadingModal = ({ loadingText, txHash, chainId }) => {
                       >
                         {getTransactionString(txHash)}
                       </Link>
-                    </Text>
+                    </Text> */}
                   </Flex>
                 </Flex>
               </ModalBody>

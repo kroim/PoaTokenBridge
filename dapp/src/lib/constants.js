@@ -23,7 +23,7 @@ export const nativeCurrencies = {
     decimals: 18,
     logoURI: ETHER_CURRENCY_LOGO,
     address: ADDRESS_ZERO,
-    name: 'sustain Ether',
+    name: 'Sustain Ether',
     symbol: 'CETH',
     mode: 'NATIVE',
     homeTokenAddress:
@@ -86,7 +86,6 @@ export const GRAPH_HEALTH_ENDPOINT =
 
 export const LOCAL_STORAGE_KEYS = {
   DONT_SHOW_CLAIMS: 'dont-show-claims',
-  MAINNET_RPC_URL: 'mainnet-rpc-url',
   SUSTAIN_RPC_URL: 'sustain-rpc-url',
   XDAI_RPC_URL: 'xdai-rpc-url',
   NEVER_SHOW_CLAIMS: 'never-show-claims',

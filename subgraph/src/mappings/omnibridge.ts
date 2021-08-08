@@ -6,7 +6,7 @@ import {
 } from '../types/Omnibridge/Omnibridge';
 import { Execution, UserRequest, Token } from '../types/schema';
 
-import { fetchTokenInfo, getDirection } from './helpers';
+import { fetchTokenInfo } from './helpers';
 
 import { getOverrides } from './overrides';
 
@@ -72,47 +72,16 @@ export function handleNewToken(event: NewTokenRegistered): void {
   token.decimals = tokenObject.decimals;
 
   let network = dataSource.network();
-  let direction = getDirection();
-  if (network == 'xdai' && direction == 'mainnet-xdai') {
+  if (network == 'xdai') {
     token.homeChainId = 100;
-    token.foreignChainId = 1;
+    token.foreignChainId = 421;
     token.homeName = tokenObject.name;
     token.foreignName = tokenObject.name.slice(0, -8);
-  } else if (network == 'xdai' && direction == 'bsc-xdai') {
-    token.homeChainId = 100;
-    token.foreignChainId = 56;
-    token.homeName = tokenObject.name;
-    token.foreignName = tokenObject.name.slice(0, -8);
-  } else if (network == 'poa-sokol') {
-    token.homeChainId = 77;
-    token.foreignChainId = 42;
-    token.homeName = tokenObject.name;
-    token.foreignName = tokenObject.name.slice(0, -8);
-  } else if (network == 'kovan') {
-    token.homeChainId = 42;
-    token.foreignChainId = 77;
-    token.homeName = tokenObject.name;
-    token.foreignName = tokenObject.name.slice(0, -11);
-  } else if (network == 'mainnet' && direction == 'mainnet-bsc') {
-    token.homeChainId = 1;
-    token.foreignChainId = 56;
-    token.homeName = tokenObject.name;
-    token.foreignName = tokenObject.name.slice(0, -11);
-  } else if (network == 'mainnet' && direction == 'mainnet-xdai') {
-    token.homeChainId = 1;
+  } else if (network == 'mainnet') {
+    token.homeChainId = 421;
     token.foreignChainId = 100;
     token.homeName = tokenObject.name;
     token.foreignName = tokenObject.name.slice(0, -11);
-  } else if (network == 'bsc' && direction == 'mainnet-bsc') {
-    token.homeChainId = 56;
-    token.foreignChainId = 1;
-    token.homeName = tokenObject.name;
-    token.foreignName = tokenObject.name.slice(0, -7);
-  } else if (network == 'bsc' && direction == 'bsc-xdai') {
-    token.homeChainId = 56;
-    token.foreignChainId = 100;
-    token.homeName = tokenObject.name;
-    token.foreignName = tokenObject.name.slice(0, -7);
   }
 
   token.save();

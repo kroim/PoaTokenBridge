@@ -116,7 +116,7 @@ const BridgeLoader = ({
                     <Text textAlign="center">
                       {`${loadingText || 'Waiting for Block Confirmations'}...`}
                     </Text>
-                    <Text color="grey" textAlign="center">
+                    {/* <Text color="grey" textAlign="center">
                       {'Monitor at ALM '}
                       <Link
                         href={getMonitorUrl(chainId, txHash)}
@@ -126,7 +126,7 @@ const BridgeLoader = ({
                       >
                         {getTransactionString(txHash)}
                       </Link>
-                    </Text>
+                    </Text> */}
                   </Flex>
                 </Flex>
               </ModalBody>

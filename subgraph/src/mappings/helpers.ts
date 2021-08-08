@@ -10,40 +10,6 @@ class TokenObject {
   decimals: i32;
 }
 
-export function getDirection(): String {
-  let network = dataSource.network();
-  let address = dataSource.address();
-  if (network == 'xdai') {
-    if (
-      address ==
-      Address.fromString('0x59447362798334d3485c64D1e4870Fde2DDC0d75')
-      // must add other bsc-xdai dedication-bridge addresses here in the future (if any)
-    ) {
-      return 'bsc-xdai';
-    }
-    return 'mainnet-xdai';
-  } else if (network == 'mainnet') {
-    if (
-      address ==
-      Address.fromString('0x69c707d975e8d883920003CC357E556a4732CD03')
-    ) {
-      return 'mainnet-bsc';
-    }
-    return 'mainnet-xdai';
-  } else if (network == 'bsc') {
-    if (
-      address ==
-      Address.fromString('0xD83893F31AA1B6B9D97C9c70D3492fe38D24d218')
-    ) {
-      return 'mainnet-bsc';
-    }
-    return 'bsc-xdai';
-  } else if (network == 'poa-sokol' || network == 'kovan') {
-    return 'kovan-sokol';
-  }
-  return '';
-}
-
 export function fetchTokenInfo(address: Address): TokenObject {
   let tokenInstance = Token.bind(address);
   log.debug('TokenContract at {}', [address.toHex()]);
