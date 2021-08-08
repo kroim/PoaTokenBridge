@@ -3,7 +3,7 @@
 
 # Development Order
 
-	[POA20 Bridge](https://bridge.poa.net/)	
+	1. [Deploy Amb bridges to home & foreign chain](tokenbridge/contract/README.md)
 	
 	2. [Deploy Bridge Mediator to home & foreign chain](bridge-contracts/README.md)
 	
