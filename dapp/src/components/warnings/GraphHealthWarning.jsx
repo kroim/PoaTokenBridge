@@ -13,7 +13,7 @@ export const GraphHealthWarning = () => {
 
   return (
     <Flex align="center" direction="column" w="100%" mb="4">
-      <Alert
+      {/* <Alert
         status="warning"
         borderRadius={5}
         boxShadow="0px 1rem 2rem rgba(204, 218, 238, 0.8)"
@@ -25,7 +25,7 @@ export const GraphHealthWarning = () => {
           transfer is still displayed as unclaimed double check its status in
           AMB Live Monitoring app by clicking the link in the Sending Tx column.
         </Text>
-      </Alert>
+      </Alert> */}
     </Flex>
   );
 };

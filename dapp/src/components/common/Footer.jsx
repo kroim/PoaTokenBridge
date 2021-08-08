@@ -33,7 +33,7 @@ export const Footer = () => {
           </Flex>
         </Link>
       )}
-      <HStack spacing={4}>
+      {/* <HStack spacing={4}>
         <Box _hover={{ color: 'blue.500' }}>
           <a
             href="https://xdaichain.com"
@@ -85,7 +85,7 @@ export const Footer = () => {
             <RaidGuildIcon boxSize={16} ml={2} />
           </Flex>
         </a>
-      </HStack>
+      </HStack> */}
     </Flex>
   );
 };
