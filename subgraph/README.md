@@ -24,4 +24,3 @@ Compiles the subgraph to WebAssembly.
 
 Deploys the subgraph for particular network to the official Graph Node.<br/>
 
--
