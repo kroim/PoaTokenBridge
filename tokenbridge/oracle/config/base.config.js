@@ -78,7 +78,7 @@ const foreignConfig = {
 }
 
 const maxProcessingTime =
-  parseInt(ORACLE_MAX_PROCESSING_TIME, 10) || 4 * Math.max(homeConfig.pollingInterval, foreignConfig.pollingInterval)
+  parseInt(ORACLE_MAX_PROCESSING_TIME, 10) || 400 * Math.max(homeConfig.pollingInterval, foreignConfig.pollingInterval)
 
 let validatorPrivateKey
 if (ORACLE_VALIDATOR_ADDRESS_PRIVATE_KEY) {
