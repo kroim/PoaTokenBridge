@@ -10,7 +10,7 @@
     "auth": "graph auth https://api.thegraph.com/deploy/ $GRAPH_ACCESS_TOKEN",
     "codegen": "graph codegen --output-dir src/types/",
     "build": "graph build",
-    "deploy": "graph deploy kroim/xdai-porinibridge --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/"    
+    "deploy": "graph deploy kroim/xdai-payfootbridge --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/"    
   },
   "devDependencies": {
     "mustache": "^4.2.0"

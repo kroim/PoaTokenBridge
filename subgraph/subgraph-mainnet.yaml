@@ -1,6 +1,6 @@
 specVersion: 0.0.2
-description: Subgraph that indexes the porinibridge transfers
-repository: https://github.com/raid-guild/xdai-porinibridge
+description: Subgraph that indexes the payfootbridge transfers
+repository: https://github.com/raid-guild/xdai-payfootbridge
 schema:
   file: ./schema.graphql
 dataSources:
@@ -10,9 +10,9 @@ dataSources:
     network: mainnet
     source:
       abi: Omnibridge
-      address: '0xA4509CF61CD9459A8a6CA209D2341bf8e35E0A8C'
+      address: '0x5b9a74E320a56B8f303dca1DB71648fBD2832bE5'
       # prettier-ignore
-      startBlock: 366005
+      startBlock: 640862
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -41,9 +41,9 @@ dataSources:
     network: mainnet
     source:
       abi: AMB
-      address: '0x25b47dC0F6678d22492be6D00d3D67c987C0A405'
+      address: '0xa17eeB30078179CB5bcF43d0EbaBfc9a10c444Dd'
       # prettier-ignore
-      startBlock: 366005
+      startBlock: 640862
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4

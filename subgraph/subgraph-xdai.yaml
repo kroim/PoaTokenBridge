@@ -1,5 +1,5 @@
 specVersion: 0.0.2
-description: Subgraph that indexes the porinibridge transfers
+description: Subgraph that indexes the payfootbridge transfers
 repository: https://github.com/kroim/PoaTokenBridge/tree/main/subgraph
 schema:
   file: ./schema.graphql
@@ -10,9 +10,9 @@ dataSources:
     network: xdai
     source:
       abi: Omnibridge
-      address: '0xD44938ED64Df32c6Cc152F8dE8c4601DEe1C8A66'
+      address: '0xcBFbb8494986a2A21A0cd3103f8a829Fd9E245f7'
       # prettier-ignore
-      startBlock: 17451196
+      startBlock: 17535970
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -41,9 +41,9 @@ dataSources:
     network: xdai
     source:
       abi: AMB
-      address: '0xb7EE7a004cE119Bdb604443c102EC2e8Ccf5Ba59'
+      address: '0xabE0d17681E720D4Dbdebe25F4c9847E1A93567C'
       # prettier-ignore
-      startBlock: 17451196
+      startBlock: 17535970
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
