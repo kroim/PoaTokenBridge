@@ -1,19 +1,19 @@
-export const SUSTAIN_XDAI_BRIDGE = 'sustain-xdai';
+export const PAYFOOT_XDAI_BRIDGE = 'payfoot-xdai';
 
-const SUSTAIN_XDAI_BRIDGE_CONFIG = {
-  label: 'sustain⥊xdai',
+const PAYFOOT_XDAI_BRIDGE_CONFIG = {
+  label: 'payfoot⥊xdai',
   homeChainId: 100,
-  foreignChainId: 421,
+  foreignChainId: 888,
   enableReversedBridge: false,
   enableForeignCurrencyBridge: false,
   foreignMediatorAddress:
-    '0xA4509CF61CD9459A8a6CA209D2341bf8e35E0A8C'.toLowerCase(),
+    '0x5b9a74E320a56B8f303dca1DB71648fBD2832bE5'.toLowerCase(),
   homeMediatorAddress:
-    '0xD44938ED64Df32c6Cc152F8dE8c4601DEe1C8A66'.toLowerCase(),
-  foreignAmbAddress: '0x25b47dC0F6678d22492be6D00d3D67c987C0A405'.toLowerCase(),
-  homeAmbAddress: '0xb7EE7a004cE119Bdb604443c102EC2e8Ccf5Ba59'.toLowerCase(),
-  foreignGraphName: 'kroim/sustain-porinibridge',
-  homeGraphName: 'kroim/xdai-porinibridge',
+    '0xcBFbb8494986a2A21A0cd3103f8a829Fd9E245f7'.toLowerCase(),
+  foreignAmbAddress: '0xa17eeB30078179CB5bcF43d0EbaBfc9a10c444Dd'.toLowerCase(),
+  homeAmbAddress: '0xabE0d17681E720D4Dbdebe25F4c9847E1A93567C'.toLowerCase(),
+  foreignGraphName: 'kroim/payfoot-payfootbridge',
+  homeGraphName: 'kroim/xdai-payfootbridge',
   ambLiveMonitorPrefix: 'https://alm-xdai.herokuapp.com',
   claimDisabled: false,
   tokensClaimDisabled: [],
@@ -25,7 +25,7 @@ const ENABLED_BRIDGES = process.env.REACT_APP_ENABLED_BRIDGES.split(' ').map(
 );
 
 const bridgeInfo = {
-  [SUSTAIN_XDAI_BRIDGE]: SUSTAIN_XDAI_BRIDGE_CONFIG,  
+  [PAYFOOT_XDAI_BRIDGE]: PAYFOOT_XDAI_BRIDGE_CONFIG,  
 };
 
 const getNetworkConfig = bridges => {
@@ -38,18 +38,18 @@ const getNetworkConfig = bridges => {
 export const networks = getNetworkConfig(ENABLED_BRIDGES);
 
 export const defaultTokens = {
-  [SUSTAIN_XDAI_BRIDGE]: {
-    421: {
-      address: '0x62DAE5fD87368F56aF3D576D4837523429DcE2b1',
-      chainId: 421,
-      symbol: 'PCT',
-      name: 'PCT',
+  [PAYFOOT_XDAI_BRIDGE]: {
+    888: {
+      address: '0x1C90008B345fA5BEf50d6AB617A1BB91cf51c41d',
+      chainId: 888,
+      symbol: 'PFT',
+      name: 'PFT',
     },
     100: {
-      address: '0x1e856ee72bd4037df8fa790abb399e59d669d171',
+      address: '0x96b4e33eeb4530113237b5ec1c1046da4531776d',
       chainId: 100,
-      symbol: 'PCT',
-      name: 'PCT on xDai',
+      symbol: 'PFT',
+      name: 'PFT on xDai',
     },
   },  
 };

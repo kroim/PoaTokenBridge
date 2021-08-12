@@ -21,7 +21,7 @@ export const useWeb3Context = () => useContext(Web3Context);
 
 const updateTitle = chainId => {
   const networkName = getNetworkName(chainId);
-  const defaultTitle = 'PoriniBridge';
+  const defaultTitle = 'PayfootBridge';
   if (!process.env.REACT_APP_TITLE) {
     document.title = defaultTitle;
   } else {
@@ -37,7 +37,7 @@ const updateTitle = chainId => {
 };
 
 const rpc = {
-  421: getRPCUrl(421),
+  888: getRPCUrl(888),
   100: getRPCUrl(100),  
 };
 

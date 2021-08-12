@@ -1,7 +1,7 @@
 {
-  "short_name": "PoriniBridge",
-  "name": "PoriniBridge",
-  "description": "The PoriniBridge is the simplest way to transfer ANY ERC20/ERC677/ERC827 token to and from the xDai chain.",
+  "short_name": "PayfootBridge",
+  "name": "PayfootBridge",
+  "description": "The PayfootBridge is the simplest way to transfer ANY ERC20/ERC677/ERC827 token to and from the xDai chain.",
   "iconPath": "android-chrome-512x512.png",
   "providedBy": { "name": "xDai Chain", "url": "https://xdaichain.com" },
   "icons": [

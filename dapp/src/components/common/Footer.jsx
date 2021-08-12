@@ -1,6 +1,6 @@
 import { Box, Flex, HStack, Text, useBreakpointValue } from '@chakra-ui/react';
 import { GithubIcon } from 'icons/GithubIcon';
-import { PoriniBridgeIcon } from 'icons/PoriniBridgeIcon';
+import { PayfootBridgeIcon } from 'icons/PayfootBridgeIcon';
 import { RaidGuildIcon } from 'icons/RaidGuildIcon';
 import { TelegramIcon } from 'icons/TelegramIcon';
 import { TwitterIcon } from 'icons/TwitterIcon';
@@ -29,7 +29,7 @@ export const Footer = () => {
             _hover={{ color: 'blue.500' }}
             transition="0.25s"
           >
-            <PoriniBridgeIcon w={6} />
+            <PayfootBridgeIcon w={6} />
           </Flex>
         </Link>
       )}

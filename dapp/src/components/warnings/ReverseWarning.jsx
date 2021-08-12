@@ -14,7 +14,7 @@ export const ReverseWarning = ({ noShadow = false }) => {
       >
         <AlertIcon minWidth="20px" />
         <Text fontSize="small">
-          The current version of PoriniBridge does not support sending native
+          The current version of PayfootBridge does not support sending native
           ERC20 tokens from the {getNetworkName(homeChainId)} to the{' '}
           {getNetworkName(foreignChainId)}.
         </Text>

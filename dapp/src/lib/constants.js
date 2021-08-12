@@ -18,12 +18,12 @@ export const NON_ETH_CHAIN_IDS = [100];
 export const XDAI_CHAIN_IDS = [100];
 
 export const nativeCurrencies = {
-  421: {
-    chainId: 421,
+  888: {
+    chainId: 888,
     decimals: 18,
     logoURI: ETHER_CURRENCY_LOGO,
     address: ADDRESS_ZERO,
-    name: 'Sustain Ether',
+    name: 'Payfoot Ether',
     symbol: 'CETH',
     mode: 'NATIVE',
     homeTokenAddress:
@@ -32,21 +32,21 @@ export const nativeCurrencies = {
 };
 
 export const nativeCurrencyMediators = {
-  421: '0x73fbDF615651B49Cb58B07aCEc2390Bc7E74b5A1'.toLowerCase(),  // WETHPoriniBridgeRouter
+  888: '0x45e36c73c5183191164292A0e46FCbEbBdBf01E2'.toLowerCase(),  // WETHPayfootBridgeRouter
 };
 
 export const networkNames = {
-  421: 'Sustain',
+  888: 'Payfoot',
   100: 'xDai',  
 };
 
 export const networkLabels = {
-  421: 'Sustain',
+  888: 'Payfoot',
   100: 'xDai',  
 };
 
 export const networkCurrencies = {
-  421: {
+  888: {
     name: 'Ethereum',
     symbol: 'ETH',
   },
@@ -58,15 +58,15 @@ export const networkCurrencies = {
 
 const {
   REACT_APP_XDAI_RPC_URL,
-  REACT_APP_SUSTAIN_RPC_URL,  
+  REACT_APP_PAYFOOT_RPC_URL,  
 } = process.env;
 
 export const chainUrls = {
-  421: {
-    rpc: REACT_APP_SUSTAIN_RPC_URL,
+  888: {
+    rpc: REACT_APP_PAYFOOT_RPC_URL,
     explorer: '',
-    chainId: 421,
-    name: networkNames[421],
+    chainId: 888,
+    name: networkNames[888],
   },
   100: {
     rpc: REACT_APP_XDAI_RPC_URL,
@@ -77,7 +77,7 @@ export const chainUrls = {
 };
 
 export const defaultTokensUrl = {
-  421: '',
+  888: '',
   100: '',  
 };
 
@@ -86,7 +86,7 @@ export const GRAPH_HEALTH_ENDPOINT =
 
 export const LOCAL_STORAGE_KEYS = {
   DONT_SHOW_CLAIMS: 'dont-show-claims',
-  SUSTAIN_RPC_URL: 'sustain-rpc-url',
+  PAYFOOT_RPC_URL: 'payfoot-rpc-url',
   XDAI_RPC_URL: 'xdai-rpc-url',
   NEVER_SHOW_CLAIMS: 'never-show-claims',
   INFINITE_UNLOCK: 'infinite-unlock',

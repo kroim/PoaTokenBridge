@@ -46,7 +46,7 @@ const Tag = ({ bg, txt }) => (
 );
 
 const networkTags = {
-  421: <Tag bg="#5A74DA" txt="Sustain" />,
+  888: <Tag bg="#5A74DA" txt="Payfoot" />,
   100: <Tag bg="#4DA9A6" txt="xDai" />,  
 };
 
