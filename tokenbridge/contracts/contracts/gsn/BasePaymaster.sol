@@ -1,5 +1,5 @@
 // SPDX-License-Identifier:MIT
-pragma solidity 0.4.26;
+pragma solidity 0.4.24;
 pragma experimental ABIEncoderV2;
 
 import "../upgradeable_contracts/Ownable.sol";

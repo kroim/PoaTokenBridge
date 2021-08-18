@@ -1,4 +1,4 @@
-pragma solidity 0.4.26;
+pragma solidity 0.4.24;
 
 import "../BasicForeignBridge.sol";
 import "../ERC20Bridge.sol";

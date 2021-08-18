@@ -1,4 +1,4 @@
-pragma solidity 0.4.26;
+pragma solidity 0.4.24;
 
 import "../../interfaces/IAMB.sol";
 import "../Ownable.sol";

@@ -1,4 +1,4 @@
-pragma solidity 0.4.26;
+pragma solidity 0.4.24;
 
 contract FeeTypes {
     bytes32 internal constant HOME_FEE = 0x89d93e5e92f7e37e490c25f0e50f7f4aad7cc94b308a566553280967be38bcf1; // keccak256(abi.encodePacked("home-fee"))

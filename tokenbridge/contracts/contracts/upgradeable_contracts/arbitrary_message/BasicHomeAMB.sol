@@ -1,4 +1,4 @@
-pragma solidity 0.4.26;
+pragma solidity 0.4.24;
 
 import "../../libraries/Message.sol";
 import "../../libraries/ArbitraryMessage.sol";

@@ -1,4 +1,4 @@
-pragma solidity 0.4.26;
+pragma solidity 0.4.24;
 
 contract Sacrifice {
     constructor(address _recipient) public payable {

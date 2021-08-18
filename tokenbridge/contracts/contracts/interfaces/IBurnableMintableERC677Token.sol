@@ -1,4 +1,4 @@
-pragma solidity 0.4.26;
+pragma solidity 0.4.24;
 import "../interfaces/ERC677.sol";
 
 contract IBurnableMintableERC677Token is ERC677 {

@@ -1,4 +1,4 @@
-pragma solidity 0.4.26;
+pragma solidity 0.4.24;
 
 import "../interfaces/IMintHandler.sol";
 import "../interfaces/IBurnableMintableERC677Token.sol";

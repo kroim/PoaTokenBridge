@@ -1,8 +1,23 @@
+[![Join the chat at https://gitter.im/poanetwork/poa-bridge](https://badges.gitter.im/poanetwork/poa-bridge.svg)](https://gitter.im/poanetwork/poa-bridge?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Build Status](https://github.com/poanetwork/tokenbridge-contracts/workflows/tokenbridge-contracts/badge.svg?branch=master)](https://github.com/poanetwork/tokenbridge-contracts/workflows/tokenbridge-contracts/badge.svg?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/poanetwork/tokenbridge-contracts/badge.svg?branch=master)](https://coveralls.io/github/poanetwork/tokenbridge-contracts?branch=master)
+
 # POA Bridge Smart Contracts
 These contracts provide the core functionality for the POA bridge. They implement the logic to relay assests between two EVM-based blockchain networks. The contracts collect bridge validator's signatures to approve and facilitate relay operations.
 
 The POA bridge smart contracts are intended to work with [the bridge process implemented on NodeJS](https://github.com/poanetwork/token-bridge).
 Please refer to the bridge process documentation to configure and deploy the bridge.
+
+## Bridge Overview
+
+The POA Bridge allows users to transfer assets between two chains in the Ethereum ecosystem. It is composed of several elements which are located in different POA Network repositories:
+
+**Bridge Elements**
+1. Solidity smart contracts, contained in this repository.
+2. [Token Bridge](https://github.com/poanetwork/token-bridge). A NodeJS oracle responsible for listening to events and sending transactions to authorize asset transfers.
+3. [Bridge UI Application](https://github.com/poanetwork/bridge-ui). A DApp interface to transfer tokens and coins between chains.
+4. [Bridge Monitor](https://github.com/poanetwork/bridge-monitor). A tool for checking balances and unprocessed events in bridged networks.
+5. [Bridge Deployment Playbooks](https://github.com/poanetwork/deployment-bridge). Manages configuration instructions for remote deployments.
 
 ## Bridge Smart Contracts Summary
 
@@ -142,6 +157,16 @@ or with Docker:
 ```bash
 ./deploy.sh token
 ```
+
+## Contributing
+
+See the [CONTRIBUTING](CONTRIBUTING.md) document for contribution, testing and pull request protocol.
+
+## License
+
+[![License: GPL v3.0](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
+This project is licensed under the GNU General Public License v3.0. See the [LICENSE](LICENSE) file for details.
 
 
 

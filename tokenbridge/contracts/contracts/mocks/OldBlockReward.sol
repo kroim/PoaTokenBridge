@@ -1,4 +1,4 @@
-pragma solidity 0.4.26;
+pragma solidity 0.4.24;
 
 contract OldBlockReward {
     function bridgesAllowedLength() external view returns (uint256) {

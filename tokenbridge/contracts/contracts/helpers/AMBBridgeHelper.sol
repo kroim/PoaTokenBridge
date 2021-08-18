@@ -1,4 +1,4 @@
-pragma solidity 0.4.26;
+pragma solidity 0.4.24;
 
 interface IHomeBridge {
     function numMessagesSigned(bytes32 _message) external view returns (uint256);

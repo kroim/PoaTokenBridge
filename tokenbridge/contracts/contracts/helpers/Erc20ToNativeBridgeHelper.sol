@@ -1,4 +1,4 @@
-pragma solidity 0.4.26;
+pragma solidity 0.4.24;
 
 interface IHomeErc20ToNativeBridge {
     function numMessagesSigned(bytes32 _message) external view returns (uint256);
