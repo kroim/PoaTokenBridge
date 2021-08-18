@@ -7,11 +7,11 @@ const PAYFOOT_XDAI_BRIDGE_CONFIG = {
   enableReversedBridge: false,
   enableForeignCurrencyBridge: false,
   foreignMediatorAddress:
-    '0x5b9a74E320a56B8f303dca1DB71648fBD2832bE5'.toLowerCase(),
+    '0xEDc050B77d98aAdF1e35525C4826fD007C09142e'.toLowerCase(),
   homeMediatorAddress:
-    '0xcBFbb8494986a2A21A0cd3103f8a829Fd9E245f7'.toLowerCase(),
-  foreignAmbAddress: '0xa17eeB30078179CB5bcF43d0EbaBfc9a10c444Dd'.toLowerCase(),
-  homeAmbAddress: '0xabE0d17681E720D4Dbdebe25F4c9847E1A93567C'.toLowerCase(),
+    '0x0065100E9AB5E853A2775532df05B34B0F8ba22e'.toLowerCase(),
+  foreignAmbAddress: '0xC91FF429bc1F68ED4BDB1E4Cb68bF179dB036209'.toLowerCase(),
+  homeAmbAddress: '0x36716c9252C706000B5f969B7Ecb7786019a64D6'.toLowerCase(),
   foreignGraphName: 'kroim/payfoot-payfootbridge',
   homeGraphName: 'kroim/xdai-payfootbridge',
   ambLiveMonitorPrefix: 'https://alm-xdai.herokuapp.com',
@@ -46,7 +46,7 @@ export const defaultTokens = {
       name: 'PFT',
     },
     100: {
-      address: '0x96b4e33eeb4530113237b5ec1c1046da4531776d',
+      address: '0xbd1936443b6ce7129ea8d2d252b1eb8f5fc2290e',
       chainId: 100,
       symbol: 'PFT',
       name: 'PFT on xDai',

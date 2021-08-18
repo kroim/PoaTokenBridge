@@ -27,12 +27,12 @@ export const nativeCurrencies = {
     symbol: 'CETH',
     mode: 'NATIVE',
     homeTokenAddress:
-      '0x2bb6abcb8c4b1ce6c170d0c656f0d8bdb291d4ae'.toLowerCase(),  // WETH address in home network
+      '0xe803f5c81b69e0fba3e15c3d08730effc3811143'.toLowerCase(),  // WETH address in home network
   },
 };
 
 export const nativeCurrencyMediators = {
-  888: '0x45e36c73c5183191164292A0e46FCbEbBdBf01E2'.toLowerCase(),  // WETHPayfootBridgeRouter
+  888: '0xf03dE6C52f66e8D25172Baf464d9A7C1CD53709d'.toLowerCase(),  // WETHPayfootBridgeRouter
 };
 
 export const networkNames = {

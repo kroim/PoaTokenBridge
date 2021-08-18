@@ -76,12 +76,12 @@ export function handleNewToken(event: NewTokenRegistered): void {
     token.homeChainId = 100;
     token.foreignChainId = 888;
     token.homeName = tokenObject.name;
-    token.foreignName = tokenObject.name.slice(0, -8);
+    token.foreignName = tokenObject.name;
   } else if (network == 'mainnet') {
     token.homeChainId = 888;
     token.foreignChainId = 100;
     token.homeName = tokenObject.name;
-    token.foreignName = tokenObject.name.slice(0, -11);
+    token.foreignName = tokenObject.name;
   }
 
   token.save();
