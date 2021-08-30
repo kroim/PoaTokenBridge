@@ -2,7 +2,7 @@ import { Alert, AlertIcon, Flex, Link, Text } from '@chakra-ui/react';
 import React from 'react';
 
 const ERC20DaiAddress = {
-  421: '0x4F96Fe3b7A6Cf9725f59d353F723c1bDb64CA6Aa',
+  999: '0x4F96Fe3b7A6Cf9725f59d353F723c1bDb64CA6Aa',
   100: '0xa844e8c64608dede1f22f519ad0e98e2629684df',  
 };
 

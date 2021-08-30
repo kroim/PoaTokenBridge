@@ -1,19 +1,19 @@
-export const SUSTAIN_XDAI_BRIDGE = 'sustain-xdai';
+export const SWISSDLT_XDAI_BRIDGE = 'swissdlt-xdai';
 
-const SUSTAIN_XDAI_BRIDGE_CONFIG = {
-  label: 'sustain⥊xdai',
+const SWISSDLT_XDAI_BRIDGE_CONFIG = {
+  label: 'swissdlt⥊xdai',
   homeChainId: 100,
-  foreignChainId: 421,
+  foreignChainId: 999,
   enableReversedBridge: false,
   enableForeignCurrencyBridge: false,
   foreignMediatorAddress:
-    '0xA4509CF61CD9459A8a6CA209D2341bf8e35E0A8C'.toLowerCase(),
+    '0x369e50796F6717d8C7bcAb8052aa98BaEd19d410'.toLowerCase(),
   homeMediatorAddress:
-    '0xD44938ED64Df32c6Cc152F8dE8c4601DEe1C8A66'.toLowerCase(),
-  foreignAmbAddress: '0x25b47dC0F6678d22492be6D00d3D67c987C0A405'.toLowerCase(),
-  homeAmbAddress: '0xb7EE7a004cE119Bdb604443c102EC2e8Ccf5Ba59'.toLowerCase(),
-  foreignGraphName: 'kroim/sustain-porinibridge',
-  homeGraphName: 'kroim/xdai-porinibridge',
+    '0x746946cab95CF2146Bd61E55BbE3A16Bf058579A'.toLowerCase(),
+  foreignAmbAddress: '0x94079Fc83fED7c5EAcF38BB47637afaf68E9D897'.toLowerCase(),
+  homeAmbAddress: '0x34173525A967F27E9ca536890F2BDa4812170f5D'.toLowerCase(),
+  foreignGraphName: 'kroim/swissdl-swissdlbridge',
+  homeGraphName: 'kroim/xdai-swissdltbridge',
   ambLiveMonitorPrefix: 'https://alm-xdai.herokuapp.com',
   claimDisabled: false,
   tokensClaimDisabled: [],
@@ -25,7 +25,7 @@ const ENABLED_BRIDGES = process.env.REACT_APP_ENABLED_BRIDGES.split(' ').map(
 );
 
 const bridgeInfo = {
-  [SUSTAIN_XDAI_BRIDGE]: SUSTAIN_XDAI_BRIDGE_CONFIG,  
+  [SWISSDLT_XDAI_BRIDGE]: SWISSDLT_XDAI_BRIDGE_CONFIG,  
 };
 
 const getNetworkConfig = bridges => {
@@ -38,18 +38,18 @@ const getNetworkConfig = bridges => {
 export const networks = getNetworkConfig(ENABLED_BRIDGES);
 
 export const defaultTokens = {
-  [SUSTAIN_XDAI_BRIDGE]: {
-    421: {
-      address: '0x62DAE5fD87368F56aF3D576D4837523429DcE2b1',
-      chainId: 421,
-      symbol: 'PCT',
-      name: 'PCT',
+  [SWISSDLT_XDAI_BRIDGE]: {
+    999: {
+      address: '0xbF9694F3601Bf337422aaf1329836DB7cDBD7B73',
+      chainId: 999,
+      symbol: 'WETH',
+      name: 'WETH',
     },
     100: {
-      address: '0x1e856ee72bd4037df8fa790abb399e59d669d171',
+      address: '0x15bc9c3ff5252105895c33153f92f707d63c1487',
       chainId: 100,
-      symbol: 'PCT',
-      name: 'PCT on xDai',
+      symbol: 'WETH',
+      name: 'WETH on xDai',
     },
   },  
 };

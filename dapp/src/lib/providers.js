@@ -4,12 +4,12 @@ import { LOCAL_STORAGE_KEYS } from 'lib/constants';
 import { getNetworkLabel, getRPCUrl, logError } from 'lib/helpers';
 
 const {
-  SUSTAIN_RPC_URL,
+  SWISSDLT_RPC_URL,
   XDAI_RPC_URL,  
 } = LOCAL_STORAGE_KEYS;
 
 const RPC_URL = {
-  421: SUSTAIN_RPC_URL,
+  999: SWISSDLT_RPC_URL,
   100: XDAI_RPC_URL,  
 };
 

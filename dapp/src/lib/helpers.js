@@ -12,7 +12,7 @@ import {
 } from 'lib/constants';
 import {
   defaultTokens,
-  SUSTAIN_XDAI_BRIDGE,
+  SWISSDLT_XDAI_BRIDGE,
   networks,
 } from 'lib/networks';
 
@@ -21,7 +21,7 @@ import { getOverriddenMediator, isOverridden } from './overrides';
 export const getWalletProviderName = provider =>
   provider?.connection?.url || null;
 
-export const getNativeCurrency = chainId => nativeCurrencies[chainId || 421];
+export const getNativeCurrency = chainId => nativeCurrencies[chainId || 999];
 
 export const getNetworkName = chainId =>
   networkNames[chainId] || 'Unknown Network';
@@ -32,13 +32,13 @@ export const getNetworkCurrency = chainId =>
   networkCurrencies[chainId] || { name: 'Unknown', symbol: 'Unknown' };
 
 export const getRPCUrl = (chainId) =>
-  chainUrls[chainId || 421].rpc;
+  chainUrls[chainId || 999].rpc;
 
 export const getExplorerUrl = chainId =>
-  (chainUrls[chainId] || chainUrls[421]).explorer;
+  (chainUrls[chainId] || chainUrls[999]).explorer;
 
 export const getTokenListUrl = chainId =>
-  defaultTokensUrl[chainId] || defaultTokensUrl[421];
+  defaultTokensUrl[chainId] || defaultTokensUrl[999];
 
 export const removeElement = (array, index) => {
   const cloneArr = [...array];
@@ -136,23 +136,23 @@ export const logDebug = (...args) => {
 };
 
 const {
-  SUSTAIN_RPC_URL,
+  SWISSDLT_RPC_URL,
   XDAI_RPC_URL,
 } = LOCAL_STORAGE_KEYS;
 
 export const getRPCKeys = bridgeDirection => {
   switch (bridgeDirection) {
-    case SUSTAIN_XDAI_BRIDGE:
+    case SWISSDLT_XDAI_BRIDGE:
     default:
       return {
         homeRPCKey: XDAI_RPC_URL,
-        foreignRPCKey: SUSTAIN_RPC_URL,
+        foreignRPCKey: SWISSDLT_RPC_URL,
       };
   }
 };
 
 export const getHelperContract = chainId =>
-  nativeCurrencyMediators[chainId || 421];
+  nativeCurrencyMediators[chainId || 999];
 
 export const getMediatorAddressWithoutOverride = (bridgeDirection, chainId) => {
   if (!bridgeDirection || !chainId) return null;

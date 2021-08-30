@@ -18,35 +18,35 @@ export const NON_ETH_CHAIN_IDS = [100];
 export const XDAI_CHAIN_IDS = [100];
 
 export const nativeCurrencies = {
-  421: {
-    chainId: 421,
+  999: {
+    chainId: 999,
     decimals: 18,
     logoURI: ETHER_CURRENCY_LOGO,
     address: ADDRESS_ZERO,
-    name: 'Sustain Ether',
+    name: 'SwissDLT Ether',
     symbol: 'CETH',
     mode: 'NATIVE',
     homeTokenAddress:
-      '0x2bb6abcb8c4b1ce6c170d0c656f0d8bdb291d4ae'.toLowerCase(),  // WETH address in home network
+      '0x15bc9c3ff5252105895c33153f92f707d63c1487'.toLowerCase(),  // WETH address in home network
   },
 };
 
 export const nativeCurrencyMediators = {
-  421: '0x73fbDF615651B49Cb58B07aCEc2390Bc7E74b5A1'.toLowerCase(),  // WETHPoriniBridgeRouter
+  999: '0xbF9694F3601Bf337422aaf1329836DB7cDBD7B73'.toLowerCase(),  // WETHSwissDLTBridgeRouter
 };
 
 export const networkNames = {
-  421: 'Sustain',
+  999: 'SwissDLT',
   100: 'xDai',  
 };
 
 export const networkLabels = {
-  421: 'Sustain',
+  999: 'SwissDLT',
   100: 'xDai',  
 };
 
 export const networkCurrencies = {
-  421: {
+  999: {
     name: 'Ethereum',
     symbol: 'ETH',
   },
@@ -58,15 +58,15 @@ export const networkCurrencies = {
 
 const {
   REACT_APP_XDAI_RPC_URL,
-  REACT_APP_SUSTAIN_RPC_URL,  
+  REACT_APP_SWISSDLT_RPC_URL,  
 } = process.env;
 
 export const chainUrls = {
-  421: {
-    rpc: REACT_APP_SUSTAIN_RPC_URL,
-    explorer: '',
-    chainId: 421,
-    name: networkNames[421],
+  999: {
+    rpc: REACT_APP_SWISSDLT_RPC_URL,
+    explorer: 'https://expedition.dev/?rpcUrl=https://rpc.operal.club',
+    chainId: 999,
+    name: networkNames[999],
   },
   100: {
     rpc: REACT_APP_XDAI_RPC_URL,
@@ -77,7 +77,7 @@ export const chainUrls = {
 };
 
 export const defaultTokensUrl = {
-  421: '',
+  999: '',
   100: '',  
 };
 
@@ -86,7 +86,7 @@ export const GRAPH_HEALTH_ENDPOINT =
 
 export const LOCAL_STORAGE_KEYS = {
   DONT_SHOW_CLAIMS: 'dont-show-claims',
-  SUSTAIN_RPC_URL: 'sustain-rpc-url',
+  SWISSDLT_RPC_URL: 'swissdlt-rpc-url',
   XDAI_RPC_URL: 'xdai-rpc-url',
   NEVER_SHOW_CLAIMS: 'never-show-claims',
   INFINITE_UNLOCK: 'infinite-unlock',

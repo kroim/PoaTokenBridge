@@ -48,7 +48,7 @@ export const addChainToMetaMask = async chainId => {
   const { name, symbol } = getNetworkCurrency(chainId);
   const currency = { name, symbol, decimals: 18 };
 
-  const add = ![421].includes(chainId);
+  const add = ![999].includes(chainId);
   if (add) {
     try {
       await tryAddChain(chainId, currency);

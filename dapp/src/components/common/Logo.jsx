@@ -9,7 +9,7 @@ import React, { useState } from 'react';
 const BAD_SRCS = {};
 
 const logos = {
-  421: EthLogo,
+  999: EthLogo,
   100: xDAILogo,  
 };
 
