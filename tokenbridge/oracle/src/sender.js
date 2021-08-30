@@ -161,7 +161,7 @@ async function main({ msg, ackMsg, nackMsg, channel, scheduleForRetry, scheduleT
 
           logger.info(`Transaction ${job.txHash} was not mined, updating gasPrice: ${job.gasPrice} -> ${gasPrice}`)
         }
-        nonce++
+        
         logger.info(`Sending transaction with nonce ${nonce}`)
         const txHash = await sendTx({
           data: job.data,
@@ -181,6 +181,7 @@ async function main({ msg, ackMsg, nackMsg, channel, scheduleForRetry, scheduleT
         }
         resendJobs.push(resendJob)
         
+        nonce++
         logger.info(
           { eventTransactionHash: job.transactionReference, generatedTransactionHash: txHash },
           `Tx generated ${txHash} for event Tx ${job.transactionReference}`
