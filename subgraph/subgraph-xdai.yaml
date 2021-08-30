@@ -10,9 +10,9 @@ dataSources:
     network: xdai
     source:
       abi: Omnibridge
-      address: '0xD44938ED64Df32c6Cc152F8dE8c4601DEe1C8A66'
+      address: '0x746946cab95CF2146Bd61E55BbE3A16Bf058579A'
       # prettier-ignore
-      startBlock: 17451196
+      startBlock: 17754666
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -41,9 +41,9 @@ dataSources:
     network: xdai
     source:
       abi: AMB
-      address: '0xb7EE7a004cE119Bdb604443c102EC2e8Ccf5Ba59'
+      address: '0x34173525A967F27E9ca536890F2BDa4812170f5D'
       # prettier-ignore
-      startBlock: 17451196
+      startBlock: 17754666
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4

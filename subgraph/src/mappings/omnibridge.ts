@@ -74,11 +74,11 @@ export function handleNewToken(event: NewTokenRegistered): void {
   let network = dataSource.network();
   if (network == 'xdai') {
     token.homeChainId = 100;
-    token.foreignChainId = 421;
+    token.foreignChainId = 999;
     token.homeName = tokenObject.name;
     token.foreignName = tokenObject.name.slice(0, -8);
   } else if (network == 'mainnet') {
-    token.homeChainId = 421;
+    token.homeChainId = 999;
     token.foreignChainId = 100;
     token.homeName = tokenObject.name;
     token.foreignName = tokenObject.name.slice(0, -11);
