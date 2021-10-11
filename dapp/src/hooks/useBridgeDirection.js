@@ -43,7 +43,7 @@ export const useBridgeDirection = () => {
         return `https://api.thegraph.com/subgraphs/name/kroim/xdai-swissdltbridge`;
       } 
         // return foreign network subgraph link
-        return `http://172.104.235.222:8000/subgraphs/name/swissdlt/swissdltbridge`;       
+        return `https://subgraph.swissdltbridge.com/subgraphs/name/swissdlt/swissdltbridge`;       
     },
     [homeChainId],
   );

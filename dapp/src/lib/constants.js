@@ -64,7 +64,7 @@ const {
 export const chainUrls = {
   999: {
     rpc: REACT_APP_SWISSDLT_RPC_URL,
-    explorer: 'https://expedition.dev/?rpcUrl=https://rpc.operal.club',
+    explorer: 'https://swissdltexplorer.com',
     chainId: 999,
     name: networkNames[999],
   },
