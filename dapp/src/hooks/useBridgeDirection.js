@@ -43,7 +43,7 @@ export const useBridgeDirection = () => {
         return `https://api.thegraph.com/subgraphs/name/kroim/xdai-payfootbridge`;
       } 
         // return foreign network subgraph link
-        return `http://139.162.158.191:8000/subgraphs/name/payfoot/payfootbridge`;       
+        return `https://subgraph.theswisscoastbridge.com/subgraphs/name/payfoot/payfootbridge`;       
     },
     [homeChainId],
   );

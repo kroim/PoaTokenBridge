@@ -64,7 +64,7 @@ const {
 export const chainUrls = {
   888: {
     rpc: REACT_APP_PAYFOOT_RPC_URL,
-    explorer: '',
+    explorer: 'https://payfootexplorer.com',
     chainId: 888,
     name: networkNames[888],
   },
