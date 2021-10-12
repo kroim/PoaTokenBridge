@@ -64,7 +64,7 @@ const {
 export const chainUrls = {
   421: {
     rpc: REACT_APP_SUSTAIN_RPC_URL,
-    explorer: 'http://porini.xyz',
+    explorer: 'https://porini.xyz',
     chainId: 421,
     name: networkNames[421],
   },
