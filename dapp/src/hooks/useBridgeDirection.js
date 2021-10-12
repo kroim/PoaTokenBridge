@@ -43,7 +43,7 @@ export const useBridgeDirection = () => {
         return `https://api.thegraph.com/subgraphs/name/kroim/xdai-porinibridge`;
       } 
         // return foreign network subgraph link
-        return `http://172.104.151.131:8000/subgraphs/name/sustain/porinibridge`;       
+        return `https://subgraph.theporinibridge.com/subgraphs/name/sustain/porinibridge`;       
     },
     [homeChainId],
   );
