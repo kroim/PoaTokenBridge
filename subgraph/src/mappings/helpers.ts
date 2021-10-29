@@ -56,20 +56,11 @@ export function updateHomeTokenInfo(
     token.homeAddress = tokenAddress;
 
     let network = dataSource.network();
-    if (network == 'xdai') {
-      token.homeChainId = 100;
+    if (network == 'porini') {
+      token.homeChainId = 421;
       token.homeName = tokenObject.name;
-    } else if (network == 'poa-sokol') {
-      token.homeChainId = 77;
-      token.homeName = tokenObject.name;
-    } else if (network == 'kovan') {
-      token.homeChainId = 42;
-      token.homeName = tokenObject.name;
-    } else if (network == 'mainnet') {
-      token.homeChainId = 1;
-      token.homeName = tokenObject.name;
-    } else if (network == 'bsc') {
-      token.homeChainId = 56;
+    } else if (network == 'matic') {
+      token.homeChainId = 137;
       token.homeName = tokenObject.name;
     }
 
@@ -78,9 +69,6 @@ export function updateHomeTokenInfo(
   }
 }
 
-// headerLength = 79 + sourceChainIdLength + destinationChainIdLength
-// for bsc, sokol, kovan, xdai and mainnet chainId < 255
-// => len(chainId) = 1
 var HEADER_LENGTH = 79 + 1 + 1;
 var METHOD_SIGNATURE_LENGTH = 4;
 var PADDED_LENGTH = 32;

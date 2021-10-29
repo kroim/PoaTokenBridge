@@ -7,12 +7,12 @@ dataSources:
   - kind: ethereum/contract
     name: Omnibridge
     # prettier-ignore
-    network: xdai
+    network: porini
     source:
       abi: Omnibridge
-      address: '0xD44938ED64Df32c6Cc152F8dE8c4601DEe1C8A66'
+      address: '0x7c2EC8E95ADFFFb30E4ab2885B1C5eCbAA427836'
       # prettier-ignore
-      startBlock: 17451196
+      startBlock: 1257533
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -38,12 +38,12 @@ dataSources:
   - kind: ethereum/contract
     name: AMB
     # prettier-ignore
-    network: xdai
+    network: porini
     source:
       abi: AMB
-      address: '0xb7EE7a004cE119Bdb604443c102EC2e8Ccf5Ba59'
+      address: '0x581C8E96BF14e78F84923ea17024a8CdCA2c9902'
       # prettier-ignore
-      startBlock: 17451196
+      startBlock: 1257533
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4

@@ -9,8 +9,8 @@
   "scripts": {
     "codegen": "graph codegen --output-dir src/types/",
     "build": "graph build",
-    "create:bridge": "graph create --node http://127.0.0.1:8020 sustain/porinibridge",
-    "deploy": "graph deploy --node http://127.0.0.1:8020 --ipfs http://localhost:5001 sustain/porinibridge"    
+    "create:bridge": "graph create --node http://127.0.0.1:8020 porini/porinibridge",
+    "deploy": "graph deploy --node http://127.0.0.1:8020 --ipfs http://localhost:5001 porini/porinibridge"    
   },
   "devDependencies": {
     "mustache": "^4.2.0"

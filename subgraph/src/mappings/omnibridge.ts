@@ -72,14 +72,14 @@ export function handleNewToken(event: NewTokenRegistered): void {
   token.decimals = tokenObject.decimals;
 
   let network = dataSource.network();
-  if (network == 'xdai') {
-    token.homeChainId = 100;
-    token.foreignChainId = 421;
+  if (network == 'porini') {
+    token.homeChainId = 421;
+    token.foreignChainId = 137;
     token.homeName = tokenObject.name;
     token.foreignName = tokenObject.name.slice(0, -8);
-  } else if (network == 'mainnet') {
-    token.homeChainId = 421;
-    token.foreignChainId = 100;
+  } else if (network == 'matic') {
+    token.homeChainId = 137;
+    token.foreignChainId = 421;
     token.homeName = tokenObject.name;
     token.foreignName = tokenObject.name.slice(0, -11);
   }
