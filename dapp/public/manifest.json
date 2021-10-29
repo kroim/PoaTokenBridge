@@ -1,9 +1,9 @@
 {
-  "short_name": "PoriniBridge",
-  "name": "PoriniBridge",
-  "description": "The PoriniBridge is the simplest way to transfer ANY ERC20/ERC677/ERC827 token to and from the xDai chain.",
+  "short_name": "PolygonBridge",
+  "name": "Polygon-Porini Bridge",
+  "description": "The Polygon-Porini Bridge is the simplest way to transfer ANY ERC20/ERC677/ERC827 token between Polygon & Porini chain.",
   "iconPath": "android-chrome-512x512.png",
-  "providedBy": { "name": "xDai Chain", "url": "https://xdaichain.com" },
+  "providedBy": { "name": "Polygon Chain", "url": "https://porini-foundation.gitbook.io/" },
   "icons": [
     {
       "src": "android-chrome-192x192.png",

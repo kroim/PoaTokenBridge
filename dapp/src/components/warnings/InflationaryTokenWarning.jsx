@@ -5,8 +5,8 @@ export const isInflationaryToken = token => {
   if (!token) return false;
   const { chainId } = token;
   switch (chainId) {
-    case 100:
     case 421:
+    case 137:
     default:
       return false;
   }

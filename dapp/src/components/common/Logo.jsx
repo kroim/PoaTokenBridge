@@ -1,6 +1,6 @@
 import { Image } from '@chakra-ui/react';
 import EthLogo from 'assets/eth-logo.png';
-import xDAILogo from 'assets/xdai-logo.png';
+import MaticLogo from 'assets/matic.png';
 import { useWeb3Context } from 'contexts/Web3Context';
 import { useBridgeDirection } from 'hooks/useBridgeDirection';
 import { uriToHttp } from 'lib/helpers';
@@ -9,8 +9,8 @@ import React, { useState } from 'react';
 const BAD_SRCS = {};
 
 const logos = {
-  421: EthLogo,
-  100: xDAILogo,  
+  137: MaticLogo,
+  421: EthLogo,  
 };
 
 export const Logo = ({ uri, reverseFallback = false }) => {

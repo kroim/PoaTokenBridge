@@ -21,7 +21,7 @@ export const useWeb3Context = () => useContext(Web3Context);
 
 const updateTitle = chainId => {
   const networkName = getNetworkName(chainId);
-  const defaultTitle = 'PoriniBridge';
+  const defaultTitle = 'Polygon-Porini Bridge';
   if (!process.env.REACT_APP_TITLE) {
     document.title = defaultTitle;
   } else {
@@ -37,8 +37,8 @@ const updateTitle = chainId => {
 };
 
 const rpc = {
-  421: getRPCUrl(421),
-  100: getRPCUrl(100),  
+  137: getRPCUrl(137),
+  421: getRPCUrl(421),  
 };
 
 const connector = async (ProviderPackage, options) => {

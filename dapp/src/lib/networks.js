@@ -1,19 +1,19 @@
-export const SUSTAIN_XDAI_BRIDGE = 'sustain-xdai';
+export const POLYGON_PORINI_BRIDGE = 'polygon-porini';
 
-const SUSTAIN_XDAI_BRIDGE_CONFIG = {
-  label: 'sustain⥊xdai',
-  homeChainId: 100,
-  foreignChainId: 421,
+const POLYGON_PORINI_BRIDGE_CONFIG = {
+  label: 'polygon⥊porini',
+  homeChainId: 421,
+  foreignChainId: 137,
   enableReversedBridge: false,
   enableForeignCurrencyBridge: false,
   foreignMediatorAddress:
-    '0xA4509CF61CD9459A8a6CA209D2341bf8e35E0A8C'.toLowerCase(),
+    '0xA4a3B9A668C32b5413ac22f6Bc9D2fdc185F8FFa'.toLowerCase(),
   homeMediatorAddress:
-    '0xD44938ED64Df32c6Cc152F8dE8c4601DEe1C8A66'.toLowerCase(),
-  foreignAmbAddress: '0x25b47dC0F6678d22492be6D00d3D67c987C0A405'.toLowerCase(),
-  homeAmbAddress: '0xb7EE7a004cE119Bdb604443c102EC2e8Ccf5Ba59'.toLowerCase(),
-  foreignGraphName: 'kroim/sustain-porinibridge',
-  homeGraphName: 'kroim/xdai-porinibridge',
+    '0x7c2EC8E95ADFFFb30E4ab2885B1C5eCbAA427836'.toLowerCase(),
+  foreignAmbAddress: '0x17fFd514b0970e0EdCfEF3c4062a7438b596834b'.toLowerCase(),
+  homeAmbAddress: '0x581C8E96BF14e78F84923ea17024a8CdCA2c9902'.toLowerCase(),
+  foreignGraphName: 'kroim/polygon-porinibridge',
+  homeGraphName: 'porini/porinibridge',
   ambLiveMonitorPrefix: 'https://alm-xdai.herokuapp.com',
   claimDisabled: false,
   tokensClaimDisabled: [],
@@ -25,7 +25,7 @@ const ENABLED_BRIDGES = process.env.REACT_APP_ENABLED_BRIDGES.split(' ').map(
 );
 
 const bridgeInfo = {
-  [SUSTAIN_XDAI_BRIDGE]: SUSTAIN_XDAI_BRIDGE_CONFIG,  
+  [POLYGON_PORINI_BRIDGE]: POLYGON_PORINI_BRIDGE_CONFIG,  
 };
 
 const getNetworkConfig = bridges => {
@@ -38,18 +38,18 @@ const getNetworkConfig = bridges => {
 export const networks = getNetworkConfig(ENABLED_BRIDGES);
 
 export const defaultTokens = {
-  [SUSTAIN_XDAI_BRIDGE]: {
-    421: {
-      address: '0x62DAE5fD87368F56aF3D576D4837523429DcE2b1',
-      chainId: 421,
-      symbol: 'PCT',
-      name: 'PCT',
+  [POLYGON_PORINI_BRIDGE]: {
+    137: {
+      address: '0x2f800db0fdb5223b3c3f354886d907a671414a7f',
+      chainId: 137,
+      symbol: 'BCT',
+      name: 'Base Carbon Tonne',
     },
-    100: {
-      address: '0x1e856ee72bd4037df8fa790abb399e59d669d171',
-      chainId: 100,
-      symbol: 'PCT',
-      name: 'PCT on xDai',
+    421: {
+      address: '0x86edf3207f4c51dfcbe3c9bcee88d218db7637c0',
+      chainId: 421,
+      symbol: 'BCT',
+      name: 'BCT on Porini',
     },
   },  
 };

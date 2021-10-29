@@ -7,16 +7,6 @@ import { getFastGasPrice } from 'lib/gasPrice';
 import { getNetworkName } from 'lib/helpers';
 import React from 'react';
 
-const LearnMoreLink = () => (
-  <Link
-    href="https://www.xdaichain.com/about-xdai/faqs/bridges-xdai-bridge-and-omnibridge#metamask-is-showing-very-high-fees-to-claim-a-transaction-on-ethereum-tokens-bridged-from-xdai-to-ethereum-is-this-estimate-accurate"
-    isExternal
-    color="blue.400"
-  >
-    learn more
-  </Link>
-);
-
 export const NeedsTransactionsWarning = ({ noShadow = false }) => {
   const { homeChainId, foreignChainId } = useBridgeDirection();
   const GAS_COST = 260000;
@@ -36,8 +26,7 @@ export const NeedsTransactionsWarning = ({ noShadow = false }) => {
         You will need some {networkCurrencies[homeChainId].symbol} and
         approximately {gasCostInETHString} ETH ({gasCostInUSDString} USD) to
         complete. When claiming, your wallet may show a higher, less accurate
-        estimate (<LearnMoreLink />
-        ).
+        estimate.
       </>
     );
   }

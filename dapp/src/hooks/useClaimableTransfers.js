@@ -30,7 +30,7 @@ export const useClaimableTransfers = () => {
         getGraphEndpoint(foreignChainId),
         requests,
       );
-      const xDaiTransfers = combineRequestsWithExecutions(
+      const poriniTransfers = combineRequestsWithExecutions(
         requests,
         executions,
         homeChainId,
@@ -39,7 +39,7 @@ export const useClaimableTransfers = () => {
         .sort((a, b) => b.timestamp - a.timestamp)
         .filter(t => !t.receivingTx);
       if (isSubscribed) {
-        setTransfers(xDaiTransfers);
+        setTransfers(poriniTransfers);
         setLoading(false);
       }
     }

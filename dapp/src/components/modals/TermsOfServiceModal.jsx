@@ -48,46 +48,21 @@ export const TermsOfServiceModal = () => {
             alignItems="center"
           >
             <Image src={InfoImage} mb={4} w="4rem" />
-            <Text>Welcome to the PoriniBridge UI</Text>
+            <Text>Welcome to the Polygon-Porini Bridge UI</Text>
           </ModalHeader>
           <ModalBody px={8} py={0}>
             <Flex align="center" direction="column" fontSize="sm">
               <Text as="p" textAlign="center" mb="4">
-                We’re launching our PoriniBridge and our UI App on a beta-testing
+                We’re launching our Polygon-Porini Bridge and our UI App on a beta-testing
                 basis. While we’ve worked long and hard to develop the core
                 features of the software, we expect that our users may detect
-                bugs and other issues. Help us improve by posting any
-                difficulties to our{' '}
-                <Link
-                  as="a"
-                  href="
-              https://forum.poa.network/c/tokenbridge/tokenbridge-support/"
-                  color="blue.500"
-                  isExternal
-                >
-                  support page
-                </Link>
-                .
+                bugs and other issues.
               </Text>
               <Text as="p" textAlign="center" mb="4">
                 {
-                  'Use of this app and the PoriniBridge is at your own risk. Users may experience unexpected delays, unexpected visual artifacts, unexpected loss of tokens or funds from improper app configuration, or other negative outcomes. '
+                  'Use of this app and the Polygon-Porini Bridge is at your own risk. Users may experience unexpected delays, unexpected visual artifacts, unexpected loss of tokens or funds from improper app configuration, or other negative outcomes. '
                 }
-              </Text>
-              <Text as="p" textAlign="center" mb="4">
-                {
-                  'By hitting the "continue" button, you are representing that you’ve read our '
-                }
-                <Link
-                  as="a"
-                  href="https://forum.poa.network/t/end-user-licensing-agreement-and-terms-of-service/2197"
-                  color="blue.500"
-                  isExternal
-                >
-                  Terms of Service
-                </Link>
-                {' in full, and that you agree to be legally bound by them. '}
-              </Text>
+              </Text>              
             </Flex>
           </ModalBody>
           <ModalFooter>

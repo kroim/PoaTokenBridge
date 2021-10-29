@@ -5,22 +5,12 @@ export const isRebasingToken = token => {
   if (!token) return false;
   const { chainId } = token;
   switch (chainId) {
-    case 100:
     case 421:
+    case 137:
     default:
       return false;
   }
 };
-
-const ExceptionsLink = ({ msg }) => (
-  <Link
-    href="https://www.xdaichain.com/for-users/bridges/omnibridge/exceptions#rebasing-tokens"
-    color="blue.500"
-    isExternal
-  >
-    {msg}
-  </Link>
-);
 
 export const RebasingTokenWarning = ({ token, noShadow = false }) => (
   <Flex align="center" direction="column" w="100%" mb="4">
@@ -31,8 +21,7 @@ export const RebasingTokenWarning = ({ token, noShadow = false }) => (
     >
       <AlertIcon minWidth="20px" />
       <Text fontSize="small">
-        {token.symbol} is a rebasing token and cannot be bridged.{' '}
-        <ExceptionsLink msg="Learn more" />.
+        {token.symbol} is a rebasing token and cannot be bridged.{' '}        
       </Text>
     </Alert>
   </Flex>

@@ -4,13 +4,13 @@ import { LOCAL_STORAGE_KEYS } from 'lib/constants';
 import { getNetworkLabel, getRPCUrl, logError } from 'lib/helpers';
 
 const {
-  SUSTAIN_RPC_URL,
-  XDAI_RPC_URL,  
+  POLYGON_RPC_URL,
+  PORINI_RPC_URL,  
 } = LOCAL_STORAGE_KEYS;
 
 const RPC_URL = {
-  421: SUSTAIN_RPC_URL,
-  100: XDAI_RPC_URL,  
+  137: POLYGON_RPC_URL,
+  421: PORINI_RPC_URL,  
 };
 
 const NETWORK_TIMEOUT = 1000;

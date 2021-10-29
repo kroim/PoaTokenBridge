@@ -12,7 +12,7 @@ import {
 } from 'lib/constants';
 import {
   defaultTokens,
-  SUSTAIN_XDAI_BRIDGE,
+  POLYGON_PORINI_BRIDGE,
   networks,
 } from 'lib/networks';
 
@@ -21,7 +21,7 @@ import { getOverriddenMediator, isOverridden } from './overrides';
 export const getWalletProviderName = provider =>
   provider?.connection?.url || null;
 
-export const getNativeCurrency = chainId => nativeCurrencies[chainId || 421];
+export const getNativeCurrency = chainId => nativeCurrencies[chainId || 137];
 
 export const getNetworkName = chainId =>
   networkNames[chainId] || 'Unknown Network';
@@ -32,13 +32,13 @@ export const getNetworkCurrency = chainId =>
   networkCurrencies[chainId] || { name: 'Unknown', symbol: 'Unknown' };
 
 export const getRPCUrl = (chainId) =>
-  chainUrls[chainId || 421].rpc;
+  chainUrls[chainId || 137].rpc;
 
 export const getExplorerUrl = chainId =>
-  (chainUrls[chainId] || chainUrls[421]).explorer;
+  (chainUrls[chainId] || chainUrls[137]).explorer;
 
 export const getTokenListUrl = chainId =>
-  defaultTokensUrl[chainId] || defaultTokensUrl[421];
+  defaultTokensUrl[chainId] || defaultTokensUrl[137];
 
 export const removeElement = (array, index) => {
   const cloneArr = [...array];
@@ -136,23 +136,23 @@ export const logDebug = (...args) => {
 };
 
 const {
-  SUSTAIN_RPC_URL,
-  XDAI_RPC_URL,
+  POLYGON_RPC_URL,
+  PORINI_RPC_URL,
 } = LOCAL_STORAGE_KEYS;
 
 export const getRPCKeys = bridgeDirection => {
   switch (bridgeDirection) {
-    case SUSTAIN_XDAI_BRIDGE:
+    case POLYGON_PORINI_BRIDGE:
     default:
       return {
-        homeRPCKey: XDAI_RPC_URL,
-        foreignRPCKey: SUSTAIN_RPC_URL,
+        homeRPCKey: PORINI_RPC_URL,
+        foreignRPCKey: POLYGON_RPC_URL,
       };
   }
 };
 
 export const getHelperContract = chainId =>
-  nativeCurrencyMediators[chainId || 421];
+  nativeCurrencyMediators[chainId || 137];
 
 export const getMediatorAddressWithoutOverride = (bridgeDirection, chainId) => {
   if (!bridgeDirection || !chainId) return null;

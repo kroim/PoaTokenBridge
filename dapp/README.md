@@ -1,4 +1,4 @@
-TokenBridge is the simplest way to transfer ANY ERC20/ERC677/ERC827 token to and from the xDai chain.
+The Polygon-Porini Bridge multi-token extension is the simplest way to transfer ANY ERC20/ERC677/ERC827 token between Polygon and Porini chain.
 
 #### `yarn dapp:start`
 

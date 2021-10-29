@@ -13,72 +13,72 @@ export const POLLING_INTERVAL =
 
 export const DEFAULT_BRIDGE_DIRECTION = process.env.REACT_APP_DEFAULT_BRIDGE_DIRECTION;
 
-export const NON_ETH_CHAIN_IDS = [100];
+export const NON_ETH_CHAIN_IDS = [421];
 
-export const XDAI_CHAIN_IDS = [100];
+export const PORINI_CHAIN_IDS = [421];
 
 export const nativeCurrencies = {
-  421: {
-    chainId: 421,
+  137: {
+    chainId: 137,
     decimals: 18,
     logoURI: ETHER_CURRENCY_LOGO,
     address: ADDRESS_ZERO,
-    name: 'Sustain Ether',
-    symbol: 'CETH',
+    name: 'MATIC',
+    symbol: 'MATIC',
     mode: 'NATIVE',
     homeTokenAddress:
-      '0x2bb6abcb8c4b1ce6c170d0c656f0d8bdb291d4ae'.toLowerCase(),  // WETH address in home network
+      '0x2d7ac2727432b1136f4984791cd9351913f15b35'.toLowerCase(),  // WMATIC address in porini network
   },
 };
 
 export const nativeCurrencyMediators = {
-  421: '0x73fbDF615651B49Cb58B07aCEc2390Bc7E74b5A1'.toLowerCase(),  // WETHPoriniBridgeRouter
+  137: '0xCF83d72daD5074deF57Db0aAca5200011667bBd4'.toLowerCase(),  // WETHBridgeRouter
 };
 
 export const networkNames = {
-  421: 'Sustain',
-  100: 'xDai',  
+  137: 'Polygon',
+  421: 'Porini',  
 };
 
 export const networkLabels = {
-  421: 'Sustain',
-  100: 'xDai',  
+  137: 'Polygon',
+  421: 'Porini',  
 };
 
 export const networkCurrencies = {
-  421: {
-    name: 'Ethereum',
-    symbol: 'ETH',
+  137: {
+    name: 'Polygon',
+    symbol: 'MATIC',
   },
-  100: {
-    name: 'xDai',
-    symbol: 'xDai',
+  421: {
+    name: 'Porini',
+    symbol: 'CETH',
   },  
 };
 
 const {
-  REACT_APP_XDAI_RPC_URL,
-  REACT_APP_SUSTAIN_RPC_URL,  
+  REACT_APP_PORINI_RPC_URL,
+  REACT_APP_POLYGON_RPC_URL,  
 } = process.env;
 
 export const chainUrls = {
+  137: {
+    rpc: REACT_APP_POLYGON_RPC_URL,
+    explorer: 'https://polygonscan.com',
+    chainId: 137,
+    name: networkNames[137],
+  },
   421: {
-    rpc: REACT_APP_SUSTAIN_RPC_URL,
+    rpc: REACT_APP_PORINI_RPC_URL,
     explorer: 'https://porini.xyz',
     chainId: 421,
     name: networkNames[421],
-  },
-  100: {
-    rpc: REACT_APP_XDAI_RPC_URL,
-    explorer: 'https://blockscout.com/xdai/mainnet',
-    chainId: 100,
-    name: networkNames[100],
   },  
 };
 
 export const defaultTokensUrl = {
-  421: '',
-  100: '',  
+  137: '',
+  421: '',  
 };
 
 export const GRAPH_HEALTH_ENDPOINT =
@@ -86,8 +86,8 @@ export const GRAPH_HEALTH_ENDPOINT =
 
 export const LOCAL_STORAGE_KEYS = {
   DONT_SHOW_CLAIMS: 'dont-show-claims',
-  SUSTAIN_RPC_URL: 'sustain-rpc-url',
-  XDAI_RPC_URL: 'xdai-rpc-url',
+  POLYGON_RPC_URL: 'polygon-rpc-url',
+  PORINI_RPC_URL: 'porini-rpc-url',
   NEVER_SHOW_CLAIMS: 'never-show-claims',
   INFINITE_UNLOCK: 'infinite-unlock',
   CUSTOM_TOKENS: 'customTokens',

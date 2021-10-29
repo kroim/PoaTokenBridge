@@ -40,10 +40,10 @@ export const useBridgeDirection = () => {
     chainId => {
       if (homeChainId === chainId) {
         // return home network sugraph link
-        return `https://api.thegraph.com/subgraphs/name/kroim/xdai-porinibridge`;
+        return `https://subgraph.thepolygonbridge.com/subgraphs/name/porini/porinibridge`;
       } 
         // return foreign network subgraph link
-        return `https://subgraph.theporinibridge.com/subgraphs/name/sustain/porinibridge`;       
+        return `https://api.thegraph.com/subgraphs/name/kroim/polygon-porinibridge`;       
     },
     [homeChainId],
   );
